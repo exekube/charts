@@ -1,0 +1,23 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: alpine
+    steps:
+      - checkout
+      - run:
+          name: helm-github-pages
+          environment:
+            - GITHUB_PAGES_REPO: exekube/charts
+            - HELM_CHARTS_SOURCE: ./src
+          command: .circleci/publish.sh
+      - run:
+          name: Verify
+          command: |
+            alias helm=/tmp/helm/bin/linux-amd64/helm
+            if [ "$CIRCLE_BRANCH" = "master" ]; then
+              helm repo add int128 https://int128.github.io/helm-charts
+              helm repo update
+              helm repo list
+              helm inspect int128/example
+            fi
