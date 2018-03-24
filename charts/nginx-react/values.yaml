@@ -5,9 +5,9 @@ replicaCount: 1
 resources: {}
 
 image:
-  repository: nginx
-  tag: 1.13.9-alpine
-  pullPolicy: Always
+  repository: ilyasotkov/forms-app
+  tag: 0.3.2
+  pullPolicy: IfNotPresent
 
 serviceType: ClusterIP
 servicePort: 80
