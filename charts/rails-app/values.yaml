@@ -11,7 +11,7 @@ image:
 
 serviceType: ClusterIP
 servicePort: 3000
-railsForceSsl: false
+railsForceSsl: ""
 
 ingress:
   # If true, an Ingress Resource will be created
