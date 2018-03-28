@@ -2,7 +2,7 @@
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: {{ template "demo-payments.fullname" . }}-incoming
+  name: {{ template "demo-payments.fullname" . }}-ingress
   labels:
     app: {{ template "demo-payments.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
@@ -19,5 +19,5 @@ spec:
   - from:
     - namespaceSelector: []
     ports:
-    - port: 50051
+    - port: {{ .Values.service.internalPort }}
       protocol: TCP
