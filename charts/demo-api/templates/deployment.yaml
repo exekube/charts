@@ -12,7 +12,7 @@ spec:
   selector:
     matchLabels:
       app: {{ template "demo-api.name" . }}
-      chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+      release: {{ .Release.Name }}
   template:
     metadata:
       labels:
