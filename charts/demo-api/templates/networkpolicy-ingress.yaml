@@ -1,0 +1,17 @@
+# Allow incoming HTTP(S) traffic
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: {{ template "demo-api.fullname" . }}-ingress
+spec:
+  policyTypes:
+  - Ingress
+  podSelector:
+    matchLabels:
+      app: {{ template "demo-api.name" . }}
+      release: {{ .Release.Name }}
+  ingress:
+  - ports:
+    - port: {{ .Values.service.internalPort }}
+      protocol: TCP
+    from: []
