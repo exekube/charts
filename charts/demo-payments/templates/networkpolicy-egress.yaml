@@ -1,0 +1,24 @@
+# Allow traffic from payments to PSP
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: {{ template "demo-payments.fullname" . }}-egress
+  labels:
+    app: {{ template "demo-payments.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  policyTypes:
+  - Egress
+  podSelector:
+    matchLabels:
+      app: {{ template "demo-payments.name" . }}
+      release: {{ .Release.Name }}
+  egress:
+  - to:
+    - ipBlock:
+        # IP for http://httpstat.us
+        cidr: 23.99.0.12/32
+    ports:
+      - port: 80
