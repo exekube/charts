@@ -16,8 +16,8 @@ spec:
       app: {{ template "demo-payments.name" . }}
       release: {{ .Release.Name }}
   ingress:
-  - from:
-    - namespaceSelector: []
-    ports:
+  - ports:
     - port: {{ .Values.service.internalPort }}
       protocol: TCP
+    from:
+    - namespaceSelector: {}
