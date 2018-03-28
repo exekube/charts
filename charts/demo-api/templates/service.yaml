@@ -15,4 +15,4 @@ spec:
   ports:
     - name: endpoint
       port: {{ .Values.service.externalPort }}
-      targetPort: {{ .Values.service.internalPort }
+      targetPort: {{ .Values.service.internalPort }}
