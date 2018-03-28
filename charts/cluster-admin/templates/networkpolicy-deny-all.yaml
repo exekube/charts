@@ -1,3 +1,4 @@
+{{- if .Values.networkPolicy.enabled -}}
 {{- range .Values.namespaces }}
 ---
 apiVersion: networking.k8s.io/v1
@@ -11,3 +12,4 @@ spec:
   - Ingress
   - Egress
 {{- end }}
+{{- end -}}

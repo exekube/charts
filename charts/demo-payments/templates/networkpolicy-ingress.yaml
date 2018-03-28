@@ -1,3 +1,4 @@
+{{- if .Values.networkPolicy.enabled -}}
 # Allow incoming HTTP(S) traffic
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
@@ -21,3 +22,4 @@ spec:
       protocol: TCP
     from:
     - namespaceSelector: {}
+{{- end -}}

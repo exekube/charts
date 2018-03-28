@@ -1,6 +1,9 @@
 # Default values for demo-payments.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+networkPolicy:
+  enabled: false
+  
 replicaCount: 1
 
 image:

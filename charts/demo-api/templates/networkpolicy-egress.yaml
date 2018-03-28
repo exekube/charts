@@ -1,3 +1,4 @@
+{{- if .Values.networkPolicy.enabled -}}
 # Allow traffic from api to team2 payments module through grpc
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
@@ -18,3 +19,4 @@ spec:
     - namespaceSelector: # no PodSelector, allow to all pods in this namespace
         matchLabels:
           name: {{ .Values.payments.namespace }}
+{{- end -}}

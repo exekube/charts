@@ -6,6 +6,9 @@ payments:
   serviceName: ""
   port: 50051
 
+networkPolicy:
+  enabled: false
+
 replicaCount: 1
 
 image:
