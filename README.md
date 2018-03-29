@@ -1,5 +1,7 @@
 # Helm charts
 
+[![CircleCI](https://circleci.com/gh/exekube/charts.svg?style=svg)](https://circleci.com/gh/exekube/charts)
+
 This is a collection of custom Helm charts, available publicly at https://exekube.github.io/charts
 
 ## Add the repository to Helm
