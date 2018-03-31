@@ -1,4 +1,4 @@
-{{- if .Values.networkPolicy.enabled -}}
+{{- if .Values.networkPolicy.create -}}
 {{- range .Values.namespaces }}
 ---
 apiVersion: networking.k8s.io/v1

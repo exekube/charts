@@ -1,4 +1,4 @@
-{{- if .Values.networkPolicy.enabled -}}
+{{- if .Values.networkPolicy.create -}}
 # Allow traffic from payments to PSP
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1

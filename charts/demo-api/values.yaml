@@ -1,13 +1,13 @@
 # Default values for demo-api.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+networkPolicy:
+  create: true
+
 payments:
   namespace: default
   serviceName: ""
   port: 50051
-
-networkPolicy:
-  enabled: false
 
 replicaCount: 1
 

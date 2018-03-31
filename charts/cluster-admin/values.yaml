@@ -1,5 +1,5 @@
 networkPolicy:
-  enabled: false
+  create: true
 
 namespaces:
   - team1
