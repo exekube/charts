@@ -1,6 +1,20 @@
+# List namespaces to create
+namespaces: []
+
+# Whether create a default deny-all policy and allow access to kube-dns
 networkPolicy:
   create: true
 
-namespaces:
-  - team1
-  - team2
+# Assign user and serviceAccounts as cluster-admins
+clusterAdmins:
+  create: false
+  users: []
+
+# List roles to limit things you can view / modify with the dashboard
+# By default, you only get the "view" role
+dashboardPermissions:
+  create: true
+  clusterRoles:
+    - view
+    # - secret-lister
+    # - cluster-viewer

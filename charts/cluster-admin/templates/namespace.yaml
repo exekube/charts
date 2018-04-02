@@ -6,7 +6,8 @@ metadata:
   name: {{ . }}
   labels:
     name: {{ . }}
-    chart: "{{ $.Chart.Name }}-{{ $.Chart.Version }}"
-    release: "{{ $.Release.Name }}"
-    heritage: "{{ $.Release.Service }}"
+    app: {{ template "cluster-admin.name" $ }}
+    chart: {{ $.Chart.Name }}-{{ $.Chart.Version }}
+    release: {{ $.Release.Name }}
+    heritage: {{ $.Release.Service }}
 {{- end }}
