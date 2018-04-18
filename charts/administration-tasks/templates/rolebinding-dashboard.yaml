@@ -6,8 +6,8 @@ kind: ClusterRoleBinding
 metadata:
   name: kubernetes-dashboard-{{ . }}
   labels:
-    app: {{ template "cluster-admin.name" $ }}
-    chart: {{ template "cluster-admin.chart" $ }}
+    app: {{ template "administration-tasks.name" $ }}
+    chart: {{ template "administration-tasks.chart" $ }}
     release: {{ $.Release.Name }}
     heritage: {{ $.Release.Service }}
 roleRef:

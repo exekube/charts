@@ -1,14 +1,16 @@
 # List namespaces to create
+# Use 'secure: true' to add deny-all networkpolicy + allow-dns networkpolicy
 namespaces: []
+# - name: team1
+#   secure: false
+# - name: team2
+#   secure: true
 
-# Whether create a default deny-all policy and allow access to kube-dns
-networkPolicy:
-  create: true
-
-# Assign user and serviceAccounts as cluster-admins
+# Assign user and serviceAccounts as administration-taskss
 clusterAdmins:
   create: false
   users: []
+    # - user@example.com
 
 # List roles to limit things you can view / modify with the dashboard
 # By default, you only get the "view" role
@@ -17,4 +19,4 @@ dashboardPermissions:
   clusterRoles:
     - view
     # - secret-lister
-    # - cluster-viewer
+    # - cluster-object-viewer

@@ -1,6 +1,0 @@
-apiVersion: v1
-description: |
-  Common configuration for cluster administration
-  Must be applied through admin (kube-system) Tiller
-name: cluster-admin
-version: 0.2.0

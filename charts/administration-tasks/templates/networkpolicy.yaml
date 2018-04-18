@@ -1,14 +1,14 @@
-{{- if .Values.networkPolicy.create -}}
 {{- range .Values.namespaces }}
+{{- if .secure }}
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: default-deny-all
-  namespace: {{ . }}
+  namespace: {{ .name }}
   labels:
-    app: {{ template "cluster-admin.name" $ }}
-    chart: {{ template "cluster-admin.chart" $ }}
+    app: {{ template "administration-tasks.name" $ }}
+    chart: {{ template "administration-tasks.chart" $ }}
     release: {{ $.Release.Name }}
     heritage: {{ $.Release.Service }}
 spec:
@@ -21,10 +21,10 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: allow-dns-access
-  namespace: {{ . }}
+  namespace: {{ .name }}
   labels:
-    app: {{ template "cluster-admin.name" $ }}
-    chart: {{ template "cluster-admin.chart" $ }}
+    app: {{ template "administration-tasks.name" $ }}
+    chart: {{ template "administration-tasks.chart" $ }}
     release: {{ $.Release.Name }}
     heritage: {{ $.Release.Service }}
 spec:

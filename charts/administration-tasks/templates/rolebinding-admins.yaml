@@ -2,10 +2,10 @@
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
-  name: cluster-admins
+  name: cluster-administrators
   labels:
-    app: {{ template "cluster-admin.name" $ }}
-    chart: {{ template "cluster-admin.chart" $ }}
+    app: {{ template "administration-tasks.name" $ }}
+    chart: {{ template "administration-tasks.chart" $ }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 roleRef:
