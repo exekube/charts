@@ -6,7 +6,7 @@ namespaces: []
 # - name: team2
 #   secure: true
 
-# Assign user and serviceAccounts as administration-taskss
+# Assign cluster-admin role to users
 clusterAdmins:
   create: false
   users: []
