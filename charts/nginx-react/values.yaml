@@ -12,15 +12,13 @@ image:
 serviceType: ClusterIP
 servicePort: 80
 
-
-
 ingress:
   # If true, an Ingress Resource will be created
   enabled: false
 
   istio:
     redirectToHttps:
-      enabled: true
+      enabled: false
       service: http-redirector-nginx
       port: 80
 

@@ -30,11 +30,11 @@ spec:
 {{- if .Values.ingress.tls }}
   tls:
 {{ toYaml .Values.ingress.tls | indent 4 }}
-{{- end -}}
+{{- end }}
 
 {{- if .Values.ingress.istio.redirectToHttps.enabled -}}
 {{- $redirectorService := .Values.ingress.istio.redirectToHttps.service -}}
-{{- $redirectorServicePort := .Values.ingress.istio.redirectToHttps.port -}}
+{{- $redirectorServicePort := .Values.ingress.istio.redirectToHttps.port }}
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
