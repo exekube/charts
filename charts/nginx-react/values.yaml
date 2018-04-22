@@ -12,9 +12,18 @@ image:
 serviceType: ClusterIP
 servicePort: 80
 
+
+
 ingress:
   # If true, an Ingress Resource will be created
   enabled: false
+
+  istio:
+    redirectToHttps:
+      enabled: true
+      service: http-redirector-nginx
+      port: 80
+
   annotations: {}
     # kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
