@@ -5,9 +5,10 @@ kind: Namespace
 metadata:
   name: {{ .name }}
   labels:
-    name: {{ .name }}
-    app: {{ template "administration-tasks.name" $ }}
     chart: {{ $.Chart.Name }}-{{ $.Chart.Version }}
     release: {{ $.Release.Name }}
     heritage: {{ $.Release.Service }}
-{{- end }}
+    {{- range $key, $value := .labels }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+{{- end -}}

@@ -3,8 +3,14 @@
 namespaces: []
 # - name: team1
 #   secure: false
+#   labels:
+#     name: team1
+#     app: team1-app
 # - name: team2
 #   secure: true
+#   labels:
+#     name: team2
+#     app: team2-app
 
 # Assign cluster-admin role to users
 clusterAdmins:
