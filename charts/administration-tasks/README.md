@@ -1,18 +1,32 @@
 # administraton-tasks chart
 
-## Create secure namespaces
+## Namespaces
 
-To create a namespace that will have:
-- A deny-all Ingress and Egress NetworkPolicy
-- An allow-dns NetworkPolicy (so that pods in the namespace can access `kube-dns`):
+### Create and label namespaces
+
+```yaml
+namespaces:
+  - name: team1
+    secure: false
+    labels:
+      name: team1
+      mylabel: team1-label
+```
+
+### Create security-hardened namespaces
+
+> :warning: When you specify `secure: true`, pods in the namespace will not be able to communicate unless you create a NetworkPolicy to allow that traffic.
+
+Specify `secure: true` in order to create:
+
+- A default-deny-all NetworkPolicy for all pods in the namespaces (Ingress and Egress)
+- An allow-dns-access NetworkPolicy (so that pods in the namespace can access `kube-dns`)
 
 ```yaml
 namespaces:
   - name: team1
     secure: true
 ```
-
-This requires you to create NetworkPolicies for all deployments that you create (you will have to include it in the chart). No NetworkPolicies will be created if you specify `secure: false`.
 
 ## Assign cluster administrators
 
