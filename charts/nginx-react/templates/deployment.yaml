@@ -18,9 +18,7 @@ spec:
     metadata:
       labels:
         app: {{ template "nginx-react.fullname" . }}
-        chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
         release: {{ .Release.Name }}
-        heritage: {{ .Release.Service }}
     spec: # PodSpec
       volumes:
         - name: {{ template "nginx-react.fullname" . }}-conf
