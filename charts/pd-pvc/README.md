@@ -6,19 +6,21 @@ This chart is specific to Google Cloud and GKE, and allows you to create a Persi
 
 1. Create snapshot from GCE Persistent Disk:
     ```sh
-    export GCE_PD_NAME=[EXISTING_PD_NAME]
+    export PD_NAME=
+    export SNAPSHOT_NAME=
+    export NEW_PD_NAME=
     ```
     ```sh
-    gcloud compute disks snapshot $GCE_PD_NAME \
+    gcloud compute disks snapshot $PD_NAME \
     --zone europe-west1-d \
-    --snapshot-names $GCE_PD_NAME-snapshot-1
+    --snapshot-names $SNAPSHOT_NAME
     ```
 2. [Disaster that destroys PV / PVC / GCE PD]
 
 3. Create new PD from snapshot:
     ```sh
-    gcloud compute disks create $NEW_GCE_PD \
-    --source-snapshot=$GCE_PD_NAME-snapshot-1 \
+    gcloud compute disks create $NEW_PD_NAME \
+    --source-snapshot=$SNAPSHOT_NAME \
     --zone=europe-west1-d \
     --type=pd-standard
     ```
@@ -34,7 +36,7 @@ This chart is specific to Google Cloud and GKE, and allows you to create a Persi
     pd-pvc:
       enabled: true
       pvcName: my-new-pvc-from-snapshot-1
-      gcePdName: $NEW_GCE_PD
+      gcePdName: $NEW_PD_NAME
     ```
 5. Use `pvcName` in `postgresql.persistence.existingClaim`:
     ```diff
