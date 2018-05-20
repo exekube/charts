@@ -1,0 +1,4 @@
+gcePdName: ""
+pvcName: ""
+size: 8Gi
+accessMode: ReadWriteOnce
