@@ -28,27 +28,9 @@ spec:
             - --append-dns-names=true
             - --grpc-port=8060
             - --grpc-hostname=citadel
-            - --citadel-storage-namespace={{ .Release.Namespace }}
-          {{- if .Values.global.multicluster.enabled }}
-            - --self-signed-ca=false
-            - --signing-cert=/etc/cacerts/ca-cert.pem
-            - --signing-key=/etc/cacerts/ca-key.pem
-            - --root-cert=/etc/cacerts/root-cert.pem
-            - --cert-chain=/etc/cacerts/cert-chain.pem
-          {{- else }}
             - --self-signed-ca=true
-          {{- end }}
+            - --citadel-storage-namespace={{ .Release.Namespace }}
           resources:
-{{- if .Values.global.multicluster.enabled }}
-          volumeMounts:
-          - name: cacerts
-            mountPath: /etc/cacerts
-            readOnly: true
-      volumes:
-      - name: cacerts
-        secret:
-         secretName: cacerts
-         optional: true
-{{- end }}
+{{ toYaml .Values.resources | indent 12 }}
       affinity:
       {{- include "nodeaffinity" . | indent 6 }}
