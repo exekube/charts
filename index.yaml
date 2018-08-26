@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   administration-tasks:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.340308811Z
+    created: 2018-08-26T13:29:13.952709792Z
     description: Chart for simplifying common cluster administration charts
     digest: dd1c9b7b8ad04d45f2da878b92f3c78d8af883c03ff60be808ee7c84a52bb97d
     name: administration-tasks
@@ -10,7 +10,7 @@ entries:
     - administration-tasks/administration-tasks-0.3.1.tgz
     version: 0.3.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.339962308Z
+    created: 2018-08-26T13:29:13.952368757Z
     description: Chart for simplifying common cluster administration charts
     digest: ae68e7ff6d6b155757de796bb5b42b7d02a336417a7b456d6163ac4b386ba8d5
     name: administration-tasks
@@ -19,15 +19,15 @@ entries:
     version: 0.3.0
   argo:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.343078784Z
+    created: 2018-08-26T13:29:13.955556086Z
     description: A Helm chart for Kubernetes
-    digest: dc9698823f45bbcb684d7dc7140a07224b0c29d0d25bd7f4322f2907d1719340
+    digest: 52e7eede506be24b882aa6b28203c93128473814758d4d54a40d0bae405798db
     name: argo
     urls:
     - argo/argo-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.341691381Z
+    created: 2018-08-26T13:29:13.954124448Z
     description: A Helm chart for Kubernetes
     digest: 7b84b2f0aefe2c445907a4fb66ddc3f8da4a4f3c71658377e207a5e948fa64b5
     name: argo
@@ -36,7 +36,7 @@ entries:
     version: 0.2.0
   argo-ci:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.344282062Z
+    created: 2018-08-26T13:29:13.956751464Z
     description: A Helm chart for Kubernetes
     digest: dfc45dc9ed40b9bdd64d0dce7cc33c216aa8c8f3f9adfc37304984ded8261ecf
     name: argo-ci
@@ -46,7 +46,7 @@ entries:
   argo-events:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: 2018-08-26T13:13:09.344754014Z
+    created: 2018-08-26T13:29:13.957214946Z
     description: A Helm chart to install Argo-Events in k8s Cluster
     digest: 125dd84f824011f64e4cb0844f87d91b3647a2b0987a36114966b330522f1add
     keywords:
@@ -65,7 +65,7 @@ entries:
     version: 0.1.0
   cluster-admin:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.346064709Z
+    created: 2018-08-26T13:29:13.958546624Z
     description: |
       Common configuration for cluster administration
       Must be applied through admin (kube-system) Tiller
@@ -75,7 +75,7 @@ entries:
     - cluster-admin/cluster-admin-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.345695844Z
+    created: 2018-08-26T13:29:13.95817591Z
     description: |
       Common configuration for cluster administration
       Must be applied through admin (kube-system) Tiller
@@ -85,7 +85,7 @@ entries:
     - cluster-admin/cluster-admin-0.2.0-alpha.1.tgz
     version: 0.2.0-alpha.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.345375431Z
+    created: 2018-08-26T13:29:13.95784962Z
     description: |
       Common configuration for cluster administration
       Must be applied through admin (kube-system) Tiller
@@ -95,7 +95,7 @@ entries:
     - cluster-admin/cluster-admin-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.345090162Z
+    created: 2018-08-26T13:29:13.95755553Z
     description: |
       Common configuration for cluster administration
       Must be applied through admin (kube-system) Tiller
@@ -106,7 +106,7 @@ entries:
     version: 0.1.0
   demo-api:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.348203823Z
+    created: 2018-08-26T13:29:13.960822246Z
     description: A Helm chart for Kubernetes
     digest: 861f9cb08da142c0300f421142d1ad2a6832e3f516942852743d89f4b4767c2e
     name: demo-api
@@ -114,7 +114,7 @@ entries:
     - demo-api/demo-api-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.347670268Z
+    created: 2018-08-26T13:29:13.960399192Z
     description: A Helm chart for Kubernetes
     digest: b0ee2933d99bc55f8560f1c3e64b932f17bfe03e07f40eec11b18cadcaf60342
     name: demo-api
@@ -122,7 +122,7 @@ entries:
     - demo-api/demo-api-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.346843638Z
+    created: 2018-08-26T13:29:13.95959421Z
     description: A Helm chart for Kubernetes
     digest: 5e0dad896c9dfce15eed8e9887e504d43746672d68cd3700f8271b387cbd80ab
     name: demo-api
@@ -131,7 +131,7 @@ entries:
     version: 0.1.0
   demo-payments:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.349724402Z
+    created: 2018-08-26T13:29:13.961826451Z
     description: A Helm chart for Kubernetes
     digest: ecab498a3cd692e6b43f306322745745c9b0f7ba033e30f77012bf03260c3c9b
     name: demo-payments
@@ -139,7 +139,7 @@ entries:
     - demo-payments/demo-payments-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.349196042Z
+    created: 2018-08-26T13:29:13.961506353Z
     description: A Helm chart for Kubernetes
     digest: 646564f59769f252385161f5634e35a5fdcd748d9de9d3334e74106856f712e9
     name: demo-payments
@@ -147,7 +147,7 @@ entries:
     - demo-payments/demo-payments-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.348713997Z
+    created: 2018-08-26T13:29:13.96116211Z
     description: A Helm chart for Kubernetes
     digest: 93d7ae0c51bd016d5e76ea225b22ca6fd1b34f43182bb90c076f69d87de0e9de
     name: demo-payments
@@ -156,7 +156,7 @@ entries:
     version: 0.1.0
   drone:
   - appVersion: 0.8.2
-    created: 2018-08-26T13:13:09.350910601Z
+    created: 2018-08-26T13:29:13.962421038Z
     description: Drone is a Continuous Delivery system built on container technology
     digest: 4ae5bcd04c49582ff971b223a14bedff532ed981a9cd0ff9db0c97d25b72d8cf
     home: https://drone.io/
@@ -180,7 +180,7 @@ entries:
     version: 0.3.0
   gcloud-sqlproxy:
   - appVersion: "1.11"
-    created: 2018-08-26T13:13:09.351537694Z
+    created: 2018-08-26T13:29:13.962963892Z
     description: Google Cloud SQL Proxy
     digest: 840b9839f691ed905831ec75d948c2ba893c4323f583e0da2d8aa0822a31bc41
     engine: gotpl
@@ -203,9 +203,9 @@ entries:
     version: 0.4.0
   istio:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.356964854Z
+    created: 2018-08-26T13:29:13.96886904Z
     description: Helm chart for all istio components
-    digest: 5faedce959b4677aefe557dd0a53918699248f36647e38e8214dbfe43e9ee6a0
+    digest: a4e101e03034177879dbd60ad1b2b0d735a7f6c9bafd1ed2c2f9b02cad1645d1
     engine: gotpl
     icon: https://istio.io/favicons/android-192x192.png
     keywords:
@@ -222,7 +222,7 @@ entries:
     - istio/istio-0.8.0.tgz
     version: 0.8.0
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.354273184Z
+    created: 2018-08-26T13:29:13.966111715Z
     description: Helm chart for all istio components
     digest: 78cf22383b1b12e2787b534c4cc408f556252b099ed9f75df6f905742c7443a3
     engine: gotpl
@@ -242,7 +242,7 @@ entries:
     version: 0.5.0
   nginx-react:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.35903269Z
+    created: 2018-08-26T13:29:13.971026353Z
     description: Deploying static content generated by Create React App with NGINX
     digest: bc1ce82c654c1664fe98965e0cd97ff447e2cbd51bfa840eac9b1101808c63cc
     name: nginx-react
@@ -250,7 +250,7 @@ entries:
     - nginx-react/nginx-react-0.2.1.tgz
     version: 0.2.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.35870435Z
+    created: 2018-08-26T13:29:13.970664728Z
     description: Deploying static content generated by Create React App with NGINX
     digest: 9e2902f549b6f8ea3b384b5151837793aa6f7aed8e7ea1a772ca6f49172b4fbf
     name: nginx-react
@@ -258,7 +258,7 @@ entries:
     - nginx-react/nginx-react-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.358359574Z
+    created: 2018-08-26T13:29:13.970291771Z
     description: Deploying static content generated by Create React App with NGINX
     digest: af88e68ce633c0429b7a09c6746975a7e80a6ada7bad638ed19d69281068a42c
     name: nginx-react
@@ -266,7 +266,7 @@ entries:
     - nginx-react/nginx-react-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.357987198Z
+    created: 2018-08-26T13:29:13.969927164Z
     description: Deploying static content generated by Create React App with NGINX
     digest: c6ca8bceed71334ee8d03ddec02cd6c2b9fb2c04aeb7d71efd0d6e5e5fad5430
     name: nginx-react
@@ -274,7 +274,7 @@ entries:
     - nginx-react/nginx-react-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.357632333Z
+    created: 2018-08-26T13:29:13.969535174Z
     description: Deploying static content generated by Create React App with NGINX
     digest: aefcd9db2a561bbe683041eac9defb915e97ea7d7bbec37e40323c8e60226efb
     name: nginx-react
@@ -282,7 +282,7 @@ entries:
     - nginx-react/nginx-react-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.357292904Z
+    created: 2018-08-26T13:29:13.969201115Z
     description: Deploying static content generated by Create React App with NGINX
     digest: 4953dfb1955a0b8799c9efc57b39030ea5c1d4ba13d00f4e2541ac342482700e
     name: nginx-react
@@ -291,7 +291,7 @@ entries:
     version: 0.1.0
   pd-pvc:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.359284781Z
+    created: 2018-08-26T13:29:13.971302075Z
     description: Chart for creating a PV and PVC from a GCE Persistent Disk
     digest: acb67c5bf58bfea5647755a7e61a0369b035ecaaad3034a5ac5c04cf2ebe6815
     name: pd-pvc
@@ -300,7 +300,7 @@ entries:
     version: 0.1.0
   rails-app:
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.362019344Z
+    created: 2018-08-26T13:29:13.974205802Z
     description: A Helm chart for Ruby on Rails / Puma applications
     digest: 7ed6581d16ea2b061a57c611c1001519c8d1d0184322b95ac0bf399371b1ece2
     name: rails-app
@@ -308,7 +308,7 @@ entries:
     - rails-app/rails-app-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.36111361Z
+    created: 2018-08-26T13:29:13.973277658Z
     description: A rails app with a React component
     digest: 1f71dfd65290f5a37bb86f51518305311605c409a1c8fe95e9ac887a61dbbde0
     name: rails-app
@@ -316,11 +316,11 @@ entries:
     - rails-app/rails-app-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v1
-    created: 2018-08-26T13:13:09.360207808Z
+    created: 2018-08-26T13:29:13.97235867Z
     description: A rails app with a React component
     digest: eb1b0c0f13a6095303cff213b788a5b2db161eb04e44b49359f6aa3613ebf0fa
     name: rails-app
     urls:
     - rails-app/rails-app-1.0.0.tgz
     version: 1.0.0
-generated: 2018-08-26T13:13:09.339418474Z
+generated: 2018-08-26T13:29:13.951817946Z
