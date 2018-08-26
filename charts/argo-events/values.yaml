@@ -3,7 +3,7 @@ imagePullPolicy: Always
 
 # Version of the Sensor CRD
 crd:
-  version: v1alpha1 # Currently not used!
+  version: v1beta1
   jobServiceAccount: default
 
 # If set to true then chart set controller instance id to release name
