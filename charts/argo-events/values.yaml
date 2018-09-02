@@ -1,4 +1,4 @@
-registry: argoproj
+registry: metalgearsolid
 imagePullPolicy: Always
 
 # Version of the Sensor CRD
@@ -11,12 +11,19 @@ useReleaseAsInstanceID: true
 instanceID: 1
 
 # controller
-controller:
+sensorController:
   name: sensor-controller
   image: sensor-controller
   tag: latest
   replicaCount: 1
-  serviceAccount: argo-events
+  serviceAccount: sensor-controller
+
+gatewayController:
+  name: gateway-controller
+  image: gateway-controller
+  tag: latest
+  replicaCount: 1
+  serviceAccount: gateway-controller
 
 # signal microservices
 signals:
