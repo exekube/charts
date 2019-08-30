@@ -19,6 +19,12 @@ spec:
       labels:
         app: {{ template "nginx-react.fullname" . }}
         release: {{ .Release.Name }}
+      {{- if .Values.podAnnotations }}
+      annotations:
+      {{- range $key, $value := .Values.podAnnotations }}
+        {{ $key }}: {{ $value | quote }}
+      {{- end }}
+      {{- end }}
     spec: # PodSpec
       volumes:
         - name: {{ template "nginx-react.fullname" . }}-conf
